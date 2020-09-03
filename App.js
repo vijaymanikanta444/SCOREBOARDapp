@@ -85,17 +85,16 @@ export default class App extends Component {
           </Text>
           <Separator />
 
+          <Text style={styles.sub}>SCORE</Text>
           <Text style={styles.scores}>
-            <Text style={styles.sub}>SCORE</Text>
-            <Text style={styles.sub}>:</Text>
             <Text style={styles.score}>{this.state.score}</Text>
             <Text style={styles.score}>/</Text>
             <Text style={styles.score}>{this.state.wickets}</Text>
           </Text>
           <Separator />
+          <Text style={styles.sub}>OVERS</Text>
           <Text style={styles.overs}>
-            <Text style={styles.sub}>OVERS</Text>
-            <Text style={styles.sub}>:</Text>
+            {/* <Text style={styles.sub}>:</Text> */}
             <Text style={styles.over}>{this.state.currentOver}</Text>
             <Text style={styles.over}>.</Text>
             <Text style={styles.over}>{this.state.currentBall}</Text>
@@ -245,7 +244,7 @@ const styles = StyleSheet.create({
   teams: {
     // display: 'flex',
     textAlign: 'center',
-    padding: 20,
+    padding: 10,
   },
   scores: {
     // display: 'flex',
@@ -260,9 +259,10 @@ const styles = StyleSheet.create({
 
   sub: {
     fontSize: 20,
+    textAlign: 'center',
   },
   score: {
-    fontSize: 100,
+    fontSize: 75,
   },
   over: {
     fontSize: 75,
@@ -270,8 +270,8 @@ const styles = StyleSheet.create({
   fixToText: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   separator: {
     marginVertical: 8,
@@ -283,8 +283,8 @@ const styles = StyleSheet.create({
   //   justifyContent: 'space-between',
   // },
   extra: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
     paddingLeft: 50,
     paddingRight: 50,
     backgroundColor: '#85C1E9',
@@ -321,5 +321,6 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     // margin: 20,
     borderRadius: 20,
+    shadowColor: '#3498DB',
   },
 });
